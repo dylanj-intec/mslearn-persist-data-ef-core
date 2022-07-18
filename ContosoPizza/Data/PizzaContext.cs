@@ -13,8 +13,8 @@ public class PizzaContext : DbContext{
         }
         //DbSet<T> properties corrospond to tables to be created in the db
         public DbSet<Pizza> Pizzas => Set<Pizza>();
-        public DbSet<Toppings> Toppings => Set<Topping>();
-        public DbSet<Sauce> Sauce => Set<Sauce>();
+        public DbSet<Topping> Toppings => Set<Topping>();
+        public DbSet<Sauce> Sauces => Set<Sauce>();
 
         
 
