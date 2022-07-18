@@ -1,5 +1,5 @@
 using ContosoPizza.Services;
-// Additional using declarations
+using ContosoPizza.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +7,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Add the PizzaContext
+builder.Services.AddSqlite<PizzaContext>("Data Source=ContosoPizza.db");
+//^ registers PizzaContext in the .NET CORE injection system
+//specifes that it uses SQLite database
+//Define a connection string which points to a local file, which is ContosoPizza.db
+
 
 // Add the PromotionsContext
 
